@@ -14,8 +14,8 @@ namespace SlotMachine.Controllers
         [HttpPost]
         public IActionResult Play([FromBody] Payload payload)
         {
-            SlotsContextTemp.TemporaryStart();
-
+            if (payload.bet <= 0)
+                return NoContent();
             return Ok(CreateResponse(payload.bet));
         }
 

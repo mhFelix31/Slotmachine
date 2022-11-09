@@ -8,7 +8,7 @@ namespace SlotMachine.Data
 
         public static List<string> Reels { get; private set; }
 
-        public static void TemporaryStart()
+        public static void ItemsStart()
         {
             Slots = new List<Slot>();
             Slots.Add(new Slot("A",     100,    1));
