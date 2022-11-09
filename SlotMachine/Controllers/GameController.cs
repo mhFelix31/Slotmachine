@@ -48,12 +48,12 @@ namespace SlotMachine.Controllers
         private Slot RandomDrawnSlot()
         {
             
-            int RNG = RandomNumberGenerator.GetInt32(SlotsContextTemp.Reels.Count-1);
-            for (int i = 0; i < SlotsContextTemp.Slots.Count; i++)
+            int RNG = RandomNumberGenerator.GetInt32(SlotsData.Reels.Count-1);
+            for (int i = 0; i < SlotsData.Slots.Count; i++)
             {
-                if (SlotsContextTemp.Reels[RNG] == SlotsContextTemp.Slots[i].Symbol)
+                if (SlotsData.Reels[RNG] == SlotsData.Slots[i].Symbol)
                 {
-                    return SlotsContextTemp.Slots[i];
+                    return SlotsData.Slots[i];
                 }
 
             }

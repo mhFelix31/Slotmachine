@@ -1,3 +1,4 @@
+using SlotMachine.Controllers;
 using SlotMachine.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-SlotsContextTemp.ItemsStart();
+DataController.DataStart();
 
 var app = builder.Build();
 
